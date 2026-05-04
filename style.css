@@ -1,1 +1,23 @@
- 
+
+/* NAVBAR DESIGN */
+.navbar{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 75px ;
+}
+.navbar li a{
+    text-decoration: none;
+    color: rgb(196, 115, 18);
+}
+.navbar span{
+    position:fixed ;
+    right: 100px;
+    border-radius: 50%;
+}
