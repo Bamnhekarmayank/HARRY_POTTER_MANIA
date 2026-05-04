@@ -1,23 +1,43 @@
-
 /* NAVBAR DESIGN */
-.navbar{
-    border: 2px solid red;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
+    background: rgba(65, 59, 59, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* for Safari */
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
     list-style: none;
     flex-direction: row;
-    gap: 75px ;
+    gap: 75px;
 }
-.navbar li a{
+
+.navbar li a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 10px;
     text-decoration: none;
-    color: rgb(196, 115, 18);
+    color: rgb(53, 51, 47);
+
+    transition: all 0.3s ease;
 }
-.navbar span{
-    position:fixed ;
-    right: 100px;
-    border-radius: 50%;
+
+.navbar li a:hover{
+    background-color: rgb(205, 141, 77);
+    border-radius: 20px;
+}
+
+.navbar span img {
+    width: 60px;
+    height: 60px;
+    border-radius: 35%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(234, 153, 4, 0.863);
+    
+
 }
