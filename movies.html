@@ -1,13 +1,18 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HARRY POTTER MANIA</title>
-    <link rel="stylesheet" href="style.css">
- </head>
- <body>
-    <nav class="navbar">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HARRY POTTER MANIA</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <video autoplay muted loop class="bgvideo">
+        <source src="https://res.cloudinary.com/dqws4wvde/video/upload/v1778856263/moivesbgvideo_v8krax.mp4" type="video/mp4">
+    </video>
+   <nav class="navbar">
       <ul>
          <li><a href="index.html">HOMES</a></li>
          <li><a href="houses.html">HOUSES</a></li>
@@ -17,7 +22,168 @@
       </ul>
       <span><img src="images/Icons and BgImg/wp10336932-sorting-hat-wallpapers.jpg" alt="HAT"></span>
    </nav>
-   <H1>MOVIES PAGE</H1>
-    
- </body>
- </html>
+   <section class="movies-container">
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854552/movie1_qaooch.jpg" alt="Philosopher Stone Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Philosopher's Stone (2001)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/VyHV0BRtdxo?si=QNRpvru1z9-3jByG">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854553/movie2_w2d2ws.jpg" alt="Chamber of Secrets Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Chamber of Secrets (2002)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/5SnFfsi1Zj8?si=Scsz0BQjYfS4fo6H">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854553/movie3_shmguh.jpg" alt="Prisoner of Azkaban Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Prisoner of Azkaban (2004)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/VwErvYgoH70?si=T98gOhSQSh29tHpE">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854552/movie4_cbrvlw.jpg" alt="Goblet of Fire Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Goblet of Fire (2005)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/80kuiBq95So?si=FuLEG8P_T_aJsx0n">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854553/movie5_gbkxgc.jpg" alt="Order of Phoenix Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Order of the Phoenix (2007)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/LLAaW1EgyY8?si=zGITdKsNToyErcZb">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854553/movie6_nxpstm.jpg" alt="Half Blood Prince Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Half-Blood Prince (2009)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/tAiy66Xrsz4?si=rSRwoDoxQA6eIM0S">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854552/movie7_mtjjq4.jpg" alt="Deathly Hallows Part 1 Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Deathly Hallows Part 1 (2010)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/17ywQS6XO-M?si=iJqkmioySg4CohqY">Watch Trailer</button>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src="https://res.cloudinary.com/dqws4wvde/image/upload/v1778854552/movie8_ddequ9.jpg" alt="Deathly Hallows Part 2 Poster">
+        <div class="movie-info">
+            <h2>Harry Potter and the Deathly Hallows Part 2 (2011)</h2>
+            <button class="trailer-btn" data-video="https://www.youtube.com/embed/5NYt1qirBWg?si=twhp9HVda9Y38PXu">Watch Trailer</button>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Trailer Popup Modal -->
+<div class="trailer-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <iframe
+    id="trailer-frame"
+    width="800"
+    height="450"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
+    </div>
+</div>
+<script>
+
+// movies container select
+const container = document.querySelector(".movies-container");
+
+// wheel scroll ko horizontal scroll me convert karna
+container.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+});
+
+
+// trailer buttons select
+const buttons = document.querySelectorAll(".trailer-btn");
+
+// modal select
+const modal = document.querySelector(".trailer-modal");
+
+// iframe select
+const iframe = document.querySelector("#trailer-frame");
+
+// close button select
+const closeBtn = document.querySelector(".close-btn");
+
+
+// button click -> trailer open
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const videoLink = button.dataset.video;
+
+        // iframe me trailer load
+        iframe.src = videoLink;
+
+        // modal show
+        modal.style.display = "flex";
+
+        // background scroll lock
+        document.body.style.overflow = "hidden";
+    });
+});
+
+
+// close button click
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    iframe.src = "";
+
+    // scroll unlock
+    document.body.style.overflow = "auto";
+});
+
+
+// modal background click
+modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+        modal.style.display = "none";
+        iframe.src = "";
+
+        // scroll unlock
+        document.body.style.overflow = "auto";
+    }
+});
+
+
+// ESC key close
+document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){
+        modal.style.display = "none";
+        iframe.src = "";
+
+        // scroll unlock
+        document.body.style.overflow = "auto";
+    }
+});
+
+</script>
+</body>
+
+</html>
